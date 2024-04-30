@@ -6,6 +6,20 @@
   <packaging>jar</packaging>
   <build>
     <finalName>devops-integration</finalName>
+   <plugins>
+   <plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-jar-plugin</artifactId>
+	<version>2.4</version>
+	<configuration>
+	  <archive>
+	    <manifest>
+		<mainClass>com.example.MainClass</mainClass>
+	    </manifest>
+	  </archive>
+	</configuration>
+    </plugin>
+   </plugins>
   </build>
   <version>1.0-SNAPSHOT</version>
   <name>Maven Quick Start Archetype</name>
@@ -15,7 +29,7 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
-      <scope>test</scope>
+      <scope>test</scope> 
     </dependency>
   </dependencies>
 </project>
