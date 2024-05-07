@@ -17,6 +17,6 @@ spec:
         app: brickbreaker
         type: front-end
     spec:
-     container:
-       -name: brickbreaker
-        image: bhavi06/devops-integration
+     containers:
+       - name: brickbreaker
+         image: bhavi/brickbreaker
