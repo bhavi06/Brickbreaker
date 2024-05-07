@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: brickbreaker
+  labels:
+    app: brickbreaker
+    type: front-end
+spec:
+   replicas: 2
+    selector:
+     matchLabels: 
+       type: front-end
+   template:
+    metadata:
+      name: brickbreaker
+      labels:
+        app: brickbreaker
+        type: front-end
+    spec:
+     container:
+       -name: brickbreaker
+        image: bhavi06/devops-integration
