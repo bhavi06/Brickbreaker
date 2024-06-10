@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Build an app
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout from version control
@@ -17,7 +17,7 @@ jobs:
       - name: Setup JDK version
         uses: actions/setup_Java@v1
         with:
-        java-version: 1.8
+         java-version: 1.8
 
       - name: Build with maven
         run: mvn cln install
