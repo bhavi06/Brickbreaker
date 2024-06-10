@@ -23,7 +23,7 @@ jobs:
         run: mvn clean install
 
       - name: Upload a artifactory
-        uses: actions/upload-artifactory@v2
+        uses: actions/upload-artifact@v2
         with:
           path: target/
 
