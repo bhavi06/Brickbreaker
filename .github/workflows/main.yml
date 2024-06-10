@@ -1,0 +1,24 @@
+name : Build Java application
+on:
+ push:
+   branches: ['main']
+ pull_request:
+   branches: ['main']
+
+jobs:
+  build:
+    name: Build an app
+    runs_on: ubuntu-latest
+
+    steps:
+     -name: Checkout from version control
+      uses: actions/checkout@v4
+
+     -name: Setup JDK version
+      uses: actions/setup_Java@v1
+      with:
+        java-version: 1.8
+
+     -name: Build with maven
+      run: mvn cln install
+      
